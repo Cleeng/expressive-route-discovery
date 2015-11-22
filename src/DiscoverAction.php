@@ -1,6 +1,6 @@
 <?php
 
-namespace ExpressiveDiscovery\Action;
+namespace ExpressiveDiscovery;
 
 use Zend\Diactoros\Response\JsonResponse;
 

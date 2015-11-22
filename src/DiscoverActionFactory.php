@@ -1,6 +1,6 @@
 <?php
 
-namespace ExpressiveDiscovery\Factory;
+namespace ExpressiveDiscovery;
 
 use ExpressiveDiscovery\Action\DiscoverAction;
 use Interop\Container\ContainerInterface;
