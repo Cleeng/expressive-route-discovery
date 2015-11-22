@@ -2,7 +2,6 @@
 
 namespace ExpressiveDiscovery;
 
-use ExpressiveDiscovery\Action\DiscoverAction;
 use Interop\Container\ContainerInterface;
 
 class DiscoverActionFactory
