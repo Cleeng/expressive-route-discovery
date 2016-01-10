@@ -8,8 +8,7 @@
         }
     ],
     "require": {
-        "php": "^5.6",
-        "zendframework/zend-expressive": "^1.0.0rc5"
+        "php": "^5.6"
     },
     "autoload": {
         "psr-4": {
