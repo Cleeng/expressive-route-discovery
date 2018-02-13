@@ -24,7 +24,7 @@ class DiscoverAction
         foreach ($this->routes as $route) {
             $routes[] = [
                 'path' => $route['path'],
-                'allowed_methods' => implode(',', $route['allowed_methods'])
+                'allowed_methods' => isset($route['allowed_methods']) ? implode(',', $route['allowed_methods']) : [],
             ];
         }
         return new JsonResponse($routes, 200, [], JsonResponse::DEFAULT_JSON_FLAGS | JSON_PRETTY_PRINT);
