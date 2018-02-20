@@ -1,6 +1,6 @@
 {
     "name": "cleeng/expressive-route-discovery",
-    "license": "2-Clause-BSD",
+    "license": "BSD-2-Clause",
     "authors": [
         {
             "name": "Mateusz Tymek",
