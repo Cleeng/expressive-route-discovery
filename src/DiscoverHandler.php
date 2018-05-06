@@ -2,9 +2,12 @@
 
 namespace ExpressiveDiscovery;
 
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 use Zend\Diactoros\Response\JsonResponse;
 
-class DiscoverAction
+class DiscoverHandler implements RequestHandlerInterface
 {
     /** @var array */
     private $routes;
@@ -18,7 +21,7 @@ class DiscoverAction
         $this->routes = $routes;
     }
 
-    public function __invoke()
+    public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $routes = [];
         foreach ($this->routes as $route) {

@@ -2,11 +2,12 @@
 
 namespace CleengTest\ExpressiveDiscovery;
 
-use ExpressiveDiscovery\DiscoverAction;
-use PHPUnit_Framework_TestCase;
+use ExpressiveDiscovery\DiscoverHandler;
+use PHPUnit\Framework\TestCase;
 use Zend\Diactoros\Response\JsonResponse;
+use Zend\Diactoros\ServerRequest;
 
-class DiscoverActionTest extends PHPUnit_Framework_TestCase
+class DiscoverHandlerTest extends TestCase
 {
     public function testActionReturnsRouteList()
     {
@@ -18,8 +19,8 @@ class DiscoverActionTest extends PHPUnit_Framework_TestCase
             ]
         ];
 
-        $action = new DiscoverAction($routes);
-        $response = $action();
+        $handler = new DiscoverHandler($routes);
+        $response = $handler->handle(new ServerRequest());
         $this->assertInstanceOf(JsonResponse::class, $response);
         $this->assertEquals(
             [['path' => '/', 'allowed_methods' => "GET"]],
